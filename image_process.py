@@ -39,10 +39,13 @@ class KerasPred:
     def load_images(self):
         pipeline = keras_ocr.pipeline.Pipeline()
         url_count: int = InputCheck(self.url).check_multi_or_single()
+
+        # TODO Debug prints
         a = self.check_input()
         print("Check Input", a)
         b = url_count
         print("Url Count", b)
+
         if self.check_input() == True and url_count == 1:
             images = keras_ocr.tools.read(self.url)
             prediction_groups = pipeline.recognize(images)

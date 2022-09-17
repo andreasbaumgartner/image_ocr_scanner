@@ -6,14 +6,14 @@ class InputCheck:
     def __init__(self, input) -> None:
         self.input = input
 
-    def check_multi_or_single(self, input_values=0) -> int:
+    def check_multi_or_single(self):
+        for i in self.input:
+            if len(i) == 0:
+                return i
 
-        if len(self.input) == 0:
-            return input_values
-
-        else:
-            input_values = len(self.input)
-            return input_values
+            else:
+                input_values = len(self.input)
+                return input_values
 
 
 # Test Cases
