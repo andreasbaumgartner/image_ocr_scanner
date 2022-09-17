@@ -1,15 +1,5 @@
 # imports
-import keras_ocr
-from keras_ocr import pipeline 
-from keras_ocr import tools
-
-# FIXME Clear the circular import issue
-pipeline = keras_ocr.pipeline.Pipeline()
-images = keras_ocr.tools
-prediction_groups = pipeline
-
-draw = keras_ocr.tools.drawAnnotations
-# keras spezific
+import keras_ocr as keras_ocr
 
 import config
 from config import logger
@@ -44,28 +34,12 @@ class KerasPred:
 
     def load_images(self):
 
-        if self.check_input(self.url) == True:
-            
+        if self.check_input() == True:
+            images = keras_ocr.tools.read(self.url)
+            prediction_groups = keras_ocr.pipeline.Pipeline(recognizer=images)
             return images, prediction_groups
         else:
             return False
-
-
-#    def return_plot(self):
-#        images[0] = self.load_images()
-#        predictions[1] = self.load_images()
-#        url_count: int = InputCheck(self.url).check_multi_or_single()
-#
-#        if url_count == 1:
-#            fig, axs = PlotImages(images).image_plot()
-#
-#        if url_count > 1:
-#            fig, axs = PlotImages(images).image_plot()
-#
-#            for ax, image, predictions in zip(axs, images, prediction_groups):
-#                keras_ocr.tools.drawAnnotations(
-#                    image=image, predictions=predictions, ax=ax
-#                )
 
 
 # Test Cases
