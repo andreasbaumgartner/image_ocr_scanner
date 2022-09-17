@@ -20,4 +20,4 @@ IMAGE_FORMATS = ("image/png", "image/jpeg", "image/jpg")
 FAKE_INPUT = True
 
 # DEFINE FIGZIZE IMAGE FOR PLOT
-FIGZIZE_IMAGE = (20, 20)
+FIGSIZE_IMAGE = (20, 20)
