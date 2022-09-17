@@ -39,7 +39,7 @@ class ImageUrlHealthCheck:
 
 
 # Test Cases Function
-test = "https://images.unsplash.com/photo-1659599746931-09cff34dd307?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=872&q=80"
-
-s = ImageUrlHealthCheck(test).url_pass()
-print(s)
+# test = "https://images.unsplash.com/photo-1659599746931-09cff34dd307?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=872&q=80"
+#
+# s = ImageUrlHealthCheck(test).url_pass()
+# print(s)

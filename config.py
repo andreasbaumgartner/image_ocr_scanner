@@ -1,5 +1,5 @@
 # Config File for Settings
-import logging   
+import logging
 
 # logging basic config
 logging.basicConfig(
@@ -11,12 +11,13 @@ logging.basicConfig(
 # define logger
 logger = logging.getLogger()
 
-# Settings
+# --------------# Settings
 
 # Img formats which are supported
-IMAGE_FORMATS = (
-        "image/png",
-        "image/jpeg",
-        "image/jpg"
-        )
+IMAGE_FORMATS = ("image/png", "image/jpeg", "image/jpg")
 
+# DEFINE USE FAKE INPUT
+FAKE_INPUT = True
+
+# DEFINE FIGZIZE IMAGE FOR PLOT
+FIGZIZE_IMAGE = (20, 20)
