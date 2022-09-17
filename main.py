@@ -1,7 +1,8 @@
 # imports
 import matplotlib.pyplot as plt
 import keras_ocr
-
+ 
+# base template 
 pipeline = keras_ocr.pipeline.Pipeline()
 
 # Get a set of three two example images
