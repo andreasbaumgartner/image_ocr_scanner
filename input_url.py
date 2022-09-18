@@ -7,23 +7,21 @@ class InputCheck:
         self.input = input
 
     def check_multi_or_single(self):
-        for i in self.input:
-            if len(i) == 0:
-                return i
+        if len(self.input) == 0 or None:
+            return False
 
-            else:
-                input_values = len(self.input)
-                return input_values
+        else:
+            input_values = len(self.input)
+            return input_values
 
 
 # Test Cases
-# test_single = ["a"]
-# test_multi = ["a", "basd", "c", "d"]
-# test_null = []
-# s = InputCheck(test_single).check_multi_or_single()
-# print(s)
-# m = InputCheck(test_multi).check_multi_or_single()
-# print(m)
-#
-# v = InputCheck(test_null).check_multi_or_single()
-# print(v)
+test_single = ["a"]
+test_multi = ["a", "basd", "c", "d"]
+test_null = []
+s = InputCheck(test_single).check_multi_or_single()
+print(s)
+m = InputCheck(test_multi).check_multi_or_single()
+print(m)
+v = InputCheck(test_null).check_multi_or_single()
+print(v)
