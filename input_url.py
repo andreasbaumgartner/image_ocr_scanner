@@ -13,15 +13,3 @@ class InputCheck:
         else:
             input_values = len(self.input)
             return input_values
-
-
-# Test Cases
-test_single = ["a"]
-test_multi = ["a", "basd", "c", "d"]
-test_null = []
-s = InputCheck(test_single).check_multi_or_single()
-print(s)
-m = InputCheck(test_multi).check_multi_or_single()
-print(m)
-v = InputCheck(test_null).check_multi_or_single()
-print(v)

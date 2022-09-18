@@ -1,5 +1,6 @@
 # imports
 import keras_ocr as keras_ocr
+import matplotlib.pyplot as plt
 
 pipeline = keras_ocr.pipeline.Pipeline()
 import config
@@ -61,11 +62,13 @@ class KerasPred:
                     image=image, predictions=predictions, ax=ax
                 )
 
+            plt.show()
+
 
 # Test Cases
 test = [
-    "https://images.unsplash.com/photo-1659599746931-09cff34dd307?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=872&q=80",
-    "https://images.unsplash.com/photo-1659976400255-d5cca2c2234a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1364&q=80",
+    "https://images.unsplash.com/photo-1570822827176-d965104c7eb0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=872&q=80",
+    "https://images.unsplash.com/photo-1584447128309-b66b7a4d1b63?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1385&q=80",
 ]
-a = KerasPred(test).load_images()
+a = KerasPred(test).process_img()
 print(a)
