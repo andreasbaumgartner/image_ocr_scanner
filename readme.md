@@ -1,5 +1,5 @@
-https://img.shields.io/badge/Version-V0.01-blue
-https://img.shields.io/github/followers/andreasbaumgartner?style=social
+[![](https://img.shields.io/badge/Version-V0.01-blue)](URL)
+[![](https://img.shields.io/github/followers/andreasbaumgartner?style=social)](URL)
 
 # Image Scanner using Keras_ocr
 
