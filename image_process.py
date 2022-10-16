@@ -4,16 +4,13 @@ import matplotlib.pyplot as plt
 
 pipeline = keras_ocr.pipeline.Pipeline()
 import config
-from config import logger
-
-# import classes
-from url_image import ImageUrlHealthCheck
-from input_url import InputCheck
-
-from image_plot import PlotImages
-
 # Import Fake inputs
 import fake_input
+from config import logger
+from image_plot import PlotImages
+from input_url import InputCheck
+# import classes
+from url_image import ImageUrlHealthCheck
 
 
 class KerasPred:
@@ -25,8 +22,8 @@ class KerasPred:
         return self
 
     def __exit__(self):
-        exit()  # TODO Check this function
         logger.info("KerrasMain Process exit")
+        exit()  # TODO Check this function
 
     def check_input(self):
         url_count: int = InputCheck(self.urls).check_multi_or_single()
