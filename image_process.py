@@ -29,7 +29,7 @@ class KerasPred:
         url_count: int = InputCheck(self.urls).check_multi_or_single()
         url_health: bool = ImageUrlHealthCheck(self.urls).url_pass()
 
-        if url_count != 0 and url_health == True:
+        if url_count != 0 and url_health:
             return True
         else:
             logger.warning(f"Input is False, {url_health} {url_count}")
@@ -37,7 +37,7 @@ class KerasPred:
 
     def load_images(self):
 
-        if self.check_input() == True:
+        if self.check_input():
             images: list = []
             for url in self.urls:
                 image = keras_ocr.tools.read(url)

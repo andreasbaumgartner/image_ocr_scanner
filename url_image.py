@@ -1,5 +1,6 @@
 # imports
 import requests
+
 import config
 from config import logger
 
@@ -25,7 +26,7 @@ class ImageUrlHealthCheck:
                 else:
                     logger.warning(f"Returned Status Code {response.status_code}")
                     status_code.append(False)
-            except:
+            except BaseException:
                 return False
         if False not in status_code:
             return True
@@ -37,7 +38,7 @@ class ImageUrlHealthCheck:
                 response = requests.head(url)
                 if response.headers["content-type"] in image_formats:
                     status_list.append(True)
-            except:
+            except BaseException:
                 status_list.append(False)
                 continue
 
@@ -45,7 +46,7 @@ class ImageUrlHealthCheck:
             return True
 
     def url_pass(self):
-        if self.check_url() == True and self.check_content() == True:
+        if self.check_url() and self.check_content():
             return True
         else:
             logger.warning(f"URL NOT PASS HEALTH CHECK")
