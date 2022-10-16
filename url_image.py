@@ -46,8 +46,10 @@ class ImageUrlHealthCheck:
             return True
 
     def url_pass(self):
+        health_check = False
         if self.check_url() and self.check_content():
+            health_check = True
             return True
         else:
-            logger.warning(f"URL NOT PASS HEALTH CHECK")
+            logger.warning(f"URL NOT PASS HEALTH CHECK{health_check}")
             return False
