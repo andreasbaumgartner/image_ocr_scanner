@@ -2,15 +2,12 @@
 import keras_ocr as keras_ocr
 import matplotlib.pyplot as plt
 
-pipeline = keras_ocr.pipeline.Pipeline()
-import config
-# Import Fake inputs
-import fake_input
 from config import logger
 from image_plot import PlotImages
 from input_url import InputCheck
-# import classes
 from url_image import ImageUrlHealthCheck
+
+pipeline = keras_ocr.pipeline.Pipeline()
 
 
 class KerasPred:
